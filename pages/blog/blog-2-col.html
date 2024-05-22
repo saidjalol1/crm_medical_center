@@ -2,11 +2,11 @@
 <html class="no-js" lang="zxx">
 
 
-<!-- Mirrored from wphix.com/template/medidove-prv/medidove/blog-2-col.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 May 2024 09:34:24 GMT -->
+<!-- Mirrored from wphix.com/template/medidove-prv/medidove/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 May 2024 09:33:46 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>MediDove - Medical and Health HTML5 Template </title>
+    <title>Blog</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,23 +14,22 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <!-- Place favicon.png in the root directory -->
 
-    <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/meanmenu.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+   <!-- CSS here -->
+   <link rel="stylesheet" href="../../css/bootstrap.min.css">
+   <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+   <link rel="stylesheet" href="../../css/animate.min.css">
+   <link rel="stylesheet" href="../../css/nice-select.css">
+   <link rel="stylesheet" href="../../css/magnific-popup.css">
+   <link rel="stylesheet" href="../../css/all.min.css">
+   <link rel="stylesheet" href="../../css/meanmenu.css">
+   <link rel="stylesheet" href="../../css/slick.css">
+   <link rel="stylesheet" href="../../css/default.css">
+   <link rel="stylesheet" href="../../css/style.css">
+   <link rel="stylesheet" href="../../css/responsive.css">
 </head>
 
 <body>
 
-    <!-- header begin -->
     <header>
         <div class="top-bar d-none d-md-block">
             <div class="container">
@@ -38,12 +37,12 @@
                     <div class="col-xl-6 offset-xl-1 col-lg-6 offset-lg-1 col-md-7 offset-md-1">
                         <div class="header-info">
                             <span><i class="fas fa-phone"></i> +1 800 833 9780</span>
-                            <span>Address</span>
+                            <span id="address">Адрес</span>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-5 col-md-4">
                         <div class="header-top-right-btn f-right">
-                            <a href="appoinment.html" class="btn">Login</a>
+                            <a href="../auth/register.html" class="btn">зарегистрироваться</a>
                         </div>
                     </div>
                 </div>
@@ -54,19 +53,24 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3 col-lg-3 col-md-5 d-flex align-items-center">
-                            <a href="index.html"><h1 style="color: rgb(201, 17, 17);">Logo</h1></a>
+                            <a href="../../index.html">
+                                <h2 style="color: rgb(185, 11, 11);">MedicCrm</h2>
+                            </a>
                     </div>
                     <div class="col-xl-9 col-lg-9 col-md-9">
                         <div class="header__menu f-right">
                             <nav id="mobile-menu">
                                 <ul>
-                                    <li><a href="index.html">Home</a>
+                                    <li><a href="../../index.html">Основной</a>
                                     </li>
-                                    <li><a href="services-2.html">Services</a>
+                                    <li><a href="../service/services-2.html">Услуги</a>
                                     </li>
-                                    <li><a href="doctor-2.html">Specialists</a>
+                                    <li><a href="../specialists/doctor-2.html">Специалисты</a>
                                     </li>
-                                    <li><a href="blog-2-col.html">Publications -></a>
+                                    <li><a href="blog-2-col.html">Публикации</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-2-col.html">Профиль</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -79,17 +83,15 @@
             </div>
         </div>
     </header>
-    <!-- header end -->
 
-    <main>
         <!-- hero-area start -->
-        <section class="breadcrumb-bg pt-200 pb-180" data-background="img/page/page-bg.jpg">
+        <section class="breadcrumb-bg pt-200 pb-180" data-background="../../img/page/page-bg.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 col-md-9">
                         <div class="page-title">
-                            <p class="small-text pb-15">We are here for your care.</p>
-                            <h1>Blog 2 Column</h1>
+                            <p class="small-text pb-15">Мы здесь для вашей заботы.</p>
+                            <h1>Наши блоги</h1>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 d-flex justify-content-start justify-content-md-end align-items-center">
@@ -97,7 +99,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb ">
                                     <li class="breadcrumb-item">
-                                        <a href="index-2.html">Home</a>
+                                        <a href="../../index.html">Home</a>
                                     </li>
                                     <li class="breadcrumb-item active" aria-current="page">Blog</li>
                                 </ol>
@@ -113,18 +115,22 @@
         <section class="blog-area pt-120 pb-120">
             <div class="container">
                 <div class="row">
+                    <div class="col-lg-12 d-flex justify-content-space-between mb-10">
+                        <form class="search-form">
+                            <input type="text" placeholder="Поиск статей">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <article class="postbox post format-image mb-40">
                             <div class="postbox__thumb">
-                                <a href="#">
-                                    <img src="img/blog/b1.jpg" alt="blog image">
+                                <a href="./blog-details.html">
+                                    <img src="../../img/blog/b1.jpg" alt="blog image">
                                 </a>
                             </div>
                             <div class="postbox__text p-30">
-                                <div class="post-meta mb-15">
-                                    <span><a href="#"><i class="far fa-user"></i> Diboli </a></span>
-                                    <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
-                                </div>
                                 <h3 class="blog-title blog-title-sm">
                                     <a href="#">Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor
                                         incididunt
@@ -135,7 +141,7 @@
                                     topics that consistently affect a wide range of people. They also get kudos.</p>
                                 </div>
                                 <div class="read-more">
-                                    <a href="#" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    <a href="./blog-details.html" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                         </article>
@@ -143,15 +149,11 @@
                     <div class="col-lg-6 col-md-6">
                         <article class="postbox post format-image mb-40">
                             <div class="postbox__thumb">
-                                <a href="#">
-                                    <img src="img/blog/b9.jpg" alt="blog image">
+                                <a href="./blog-details.html">
+                                    <img src="../../img/blog/b1.jpg" alt="blog image">
                                 </a>
                             </div>
                             <div class="postbox__text p-30">
-                                <div class="post-meta mb-15">
-                                    <span><a href="#"><i class="far fa-user"></i> Diboli </a></span>
-                                    <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
-                                </div>
                                 <h3 class="blog-title blog-title-sm">
                                     <a href="#">Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor
                                         incididunt
@@ -162,7 +164,7 @@
                                     topics that consistently affect a wide range of people. They also get kudos.</p>
                                 </div>
                                 <div class="read-more">
-                                    <a href="#" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    <a href="./blog-details.html" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                         </article>
@@ -170,15 +172,11 @@
                     <div class="col-lg-6 col-md-6">
                         <article class="postbox post format-image mb-40">
                             <div class="postbox__thumb">
-                                <a href="#">
-                                    <img src="img/blog/b8.jpg" alt="blog image">
+                                <a href="./blog-details.html">
+                                    <img src="../../img/blog/b1.jpg" alt="blog image">
                                 </a>
                             </div>
                             <div class="postbox__text p-30">
-                                <div class="post-meta mb-15">
-                                    <span><a href="#"><i class="far fa-user"></i> Diboli </a></span>
-                                    <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
-                                </div>
                                 <h3 class="blog-title blog-title-sm">
                                     <a href="#">Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor
                                         incididunt
@@ -189,7 +187,7 @@
                                     topics that consistently affect a wide range of people. They also get kudos.</p>
                                 </div>
                                 <div class="read-more">
-                                    <a href="#" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    <a href="./blog-details.html" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                         </article>
@@ -197,15 +195,11 @@
                     <div class="col-lg-6 col-md-6">
                         <article class="postbox post format-image mb-40">
                             <div class="postbox__thumb">
-                                <a href="#">
-                                    <img src="img/blog/b7.jpg" alt="blog image">
+                                <a href="./blog-details.html">
+                                    <img src="../../img/blog/b1.jpg" alt="blog image">
                                 </a>
                             </div>
                             <div class="postbox__text p-30">
-                                <div class="post-meta mb-15">
-                                    <span><a href="#"><i class="far fa-user"></i> Diboli </a></span>
-                                    <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
-                                </div>
                                 <h3 class="blog-title blog-title-sm">
                                     <a href="#">Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor
                                         incididunt
@@ -216,7 +210,7 @@
                                     topics that consistently affect a wide range of people. They also get kudos.</p>
                                 </div>
                                 <div class="read-more">
-                                    <a href="#" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    <a href="./blog-details.html" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                         </article>
@@ -224,15 +218,11 @@
                     <div class="col-lg-6 col-md-6">
                         <article class="postbox post format-image mb-40">
                             <div class="postbox__thumb">
-                                <a href="#">
-                                    <img src="img/blog/b6.jpg" alt="blog image">
+                                <a href="./blog-details.html">
+                                    <img src="../../img/blog/b1.jpg" alt="blog image">
                                 </a>
                             </div>
                             <div class="postbox__text p-30">
-                                <div class="post-meta mb-15">
-                                    <span><a href="#"><i class="far fa-user"></i> Diboli </a></span>
-                                    <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
-                                </div>
                                 <h3 class="blog-title blog-title-sm">
                                     <a href="#">Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor
                                         incididunt
@@ -243,7 +233,7 @@
                                     topics that consistently affect a wide range of people. They also get kudos.</p>
                                 </div>
                                 <div class="read-more">
-                                    <a href="#" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    <a href="./blog-details.html" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                         </article>
@@ -251,15 +241,11 @@
                     <div class="col-lg-6 col-md-6">
                         <article class="postbox post format-image mb-40">
                             <div class="postbox__thumb">
-                                <a href="#">
-                                    <img src="img/blog/b5.jpg" alt="blog image">
+                                <a href="./blog-details.html">
+                                    <img src="../../img/blog/b1.jpg" alt="blog image">
                                 </a>
                             </div>
                             <div class="postbox__text p-30">
-                                <div class="post-meta mb-15">
-                                    <span><a href="#"><i class="far fa-user"></i> Diboli </a></span>
-                                    <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
-                                </div>
                                 <h3 class="blog-title blog-title-sm">
                                     <a href="#">Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor
                                         incididunt
@@ -270,7 +256,7 @@
                                     topics that consistently affect a wide range of people. They also get kudos.</p>
                                 </div>
                                 <div class="read-more">
-                                    <a href="#" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    <a href="./blog-details.html" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                         </article>
@@ -296,8 +282,6 @@
     </main>
 
     <!-- footer start -->
- 
-    <!-- footer start -->
     <footer style="margin-top: 100px;">
         <div class="footer-top primary-bg pt-115 pb-90">
             <div class="container">
@@ -309,20 +293,23 @@
                                     <i class="fas fa-phone"></i>
                                 </div>
                                 <div class="emmergency-call-text f-left">
-                                    <h6>Emergency number</h6>
+                                    <h6>Экстренный номер</h6>
                                     <span>202-555-0104</span>
                                 </div>
                             </div>
                             <div class="footer-logo mb-35">
-                                <a href="#"><h1>Logo</h1></a>
+                                <a href="index.html">
+                                    <h2 style="color: rgb(185, 11, 11);">MedicCrm</h2>
+                                </a>
                             </div>
                             <div class="footer-contact-content mb-25">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                                <p>
+
+                                </p>
                             </div>
                             <div class="footer-emailing">
                                 <ul>
-                                    <li><i class="far fa-envelope"></i><a href="https://wphix.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fc95929a93bc99849d918c9099919998959f9d90d29f9391">[email&#160;protected]</a></li>
+                                    <li><i class="far fa-envelope"></i><a >example@gmal.com</a></li>
                                     <li><i class="far fa-clone"></i>examplemedical.com</li>
                                     <li><i class="far fa-flag"></i>227 Marion Street, Columbia</li>
                                 </ul>
@@ -332,16 +319,16 @@
                     <div class="col-xl-2 offset-xl-1 col-lg-3 col-md-4">
                         <div class="footer-widget mb-30">
                             <div class="footer-title">
-                                <h3>Departments</h3>
+                                <h3>Услуги</h3>
                             </div>
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="#">Surgery and Radiology</a></li>
-                                    <li><a href="#">Family Medicine</a></li>
-                                    <li><a href="#">Women’s Health</a></li>
-                                    <li><a href="#">Optician</a></li>
-                                    <li><a href="#">Pediatrics</a></li>
-                                    <li><a href="#">Dermatology</a></li>
+                                    <li><a href="../service/service_detail.html">диагностика</a></li>
+                                    <li><a href="../service/service_detail.html">уход</a></li>
+                                    <li><a href="../service/service_detail.html">реабилитация</a></li>
+                                    <li><a href="../service/service_detail.html">процедуры</a></li>
+                                    <li><a href="../service/service_detail.html">тесты</a></li>
+                                    <li><a href="../service/service_detail.html">тесты</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -369,27 +356,27 @@
     <!-- footer end -->
 
     <!-- JS here -->
-    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/one-page-nav-min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/ajax-form.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/jquery.meanmenu.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../../js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/owl.carousel.min.js"></script>
+    <script src="../../js/isotope.pkgd.min.js"></script>
+    <script src="../../js/one-page-nav-min.js"></script>
+    <script src="../../js/slick.min.js"></script>
+    <script src="../../js/ajax-form.js"></script>
+    <script src="../../js/wow.min.js"></script>
+    <script src="../../js/jquery.nice-select.min.js"></script>
+    <script src="../../js/jquery.scrollUp.min.js"></script>
+    <script src="../../js/jquery.meanmenu.min.js"></script>
+    <script src="../../js/jquery.counterup.min.js"></script>
+    <script src="../../js/waypoints.min.js"></script>
+    <script src="../../js/imagesloaded.pkgd.min.js"></script>
+    <script src="../../js/jquery.magnific-popup.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvEEMx3XDpByNzYNn0n62Zsq_sVYPx1zY"></script>
+    <script src="../../js/plugins.js"></script>
+    <script src="../../js/main.js"></script>
 </body>
 
 
-<!-- Mirrored from wphix.com/template/medidove-prv/medidove/blog-2-col.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 May 2024 09:34:30 GMT -->
+<!-- Mirrored from wphix.com/template/medidove-prv/medidove/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 May 2024 09:33:46 GMT -->
 </html>

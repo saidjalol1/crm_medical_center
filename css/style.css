@@ -1690,18 +1690,6 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
-.nice-select.postform {
-
-	width: 100%;
-
-	border: 0;
-
-	padding-left: 0;
-
-	line-height: 1;
-
-}
-
 .care-give-option img {
 
 	position: absolute;
@@ -1711,34 +1699,6 @@ input.main-search-input:-ms-input-placeholder {
 	top: -13px;
 
 	left: 0;
-
-}
-
-.nice-select.postform .current {
-
-	font-size: 24px;
-
-	color: #223645;
-
-	font-weight: 600;
-
-	letter-spacing: -.3px;
-
-	font-family: poppins;
-
-	text-transform: capitalize;
-
-}
-
-.nice-select.postform .list {
-
-	z-index: 16;
-
-	width: 100%;
-
-	border-radius: 0;
-
-	margin-top: 13px;
 
 }
 
@@ -2716,43 +2676,6 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
-.service-contact-form .nice-select {
-
-	width: 100%;
-
-	height: 60px;
-
-	padding-top: 9px;
-
-	padding-left: 60px;
-
-	padding-bottom: 9px;
-
-	border: 2px solid #f0f8ff;
-
-	border-radius: 0;
-
-}
-
-.service-contact-form .nice-select .current {
-
-	font-weight: 400;
-
-	color: #647589;
-
-	font-size: 14px;
-
-}
-
-.service-contact-form .nice-select ul.list {
-
-	width: 100%;
-
-	border-radius: 0;
-
-	border: 2px solid #f0f8ff;
-
-}
 
 .contact-hourglass::before {
 
@@ -4418,39 +4341,6 @@ li.price-del i {
 
 }
 
-.calculate-box .nice-select {
-
-	width: 100%;
-
-	height: 70px;
-
-	padding-top: 14px;
-
-	border-radius: 0;
-
-	border: 2px solid #eee7ff;
-
-	padding-left: 38px;
-
-	margin-bottom: 20px;
-
-}
-
-.calculate-box .nice-select::after {
-
-	margin-right: 18px;
-
-	margin-top: -1px;
-
-}
-
-.calculate-box .nice-select .list {
-
-	width: 100%;
-
-	border-radius: 0;
-
-}
 
 .calculate-form input {
 
@@ -4714,33 +4604,7 @@ li.price-del i {
 
 }
 
-.appointment-area-3 .calculate-box .nice-select {
 
-	border: 2px solid #d3e2f0;
-
-}
-
-.appointment-area-3 .calculate-form input {
-
-	border: 2px solid #d3e2f0;
-
-}
-
-.appointment-form-2 input {
-
-	width: 100%;
-
-}
-
-.appointment-form-2 input {
-
-	width: 100%;
-
-	border: 0;
-
-	padding: 0;
-
-}
 
 .appointment-form-2 input::placeholder {
 
@@ -4790,47 +4654,7 @@ li.price-del i {
 
 }
 
-.nice-select.postform::after {
 
-	border-bottom: 3px solid #223645;
-
-	border-right: 3px solid #223645;
-
-	content: '';
-
-	display: block;
-
-	height: 8px;
-
-	margin-top: -23px;
-
-	pointer-events: none;
-
-	position: absolute;
-
-	right: 5px;
-
-	top: 50%;
-
-	-webkit-transform-origin: 66% 66%;
-
-	-ms-transform-origin: 66% 66%;
-
-	transform-origin: 66% 66%;
-
-	-webkit-transform: rotate(45deg);
-
-	-ms-transform: rotate(45deg);
-
-	transform: rotate(45deg);
-
-	-webkit-transition: all 0.15s ease-in-out;
-
-	transition: all 0.15s ease-in-out;
-
-	width: 8px;
-
-}
 
 /* news-letter */
 
@@ -7432,91 +7256,7 @@ ul.cat li a:hover {
 
 
 
-.pro-filter select {
 
-  border: 2px solid #eaedff;
-
-  padding: 17px 30px;
-
-  display: inline-block;
-
-  text-transform: uppercase;
-
-  font-size: 12px;
-
-  letter-spacing: 2px;
-
-  line-height: 1;
-
-  color: #6f7172;
-
-  appearance: none;
-
-  -moz-appearance: none;
-
-  width: 145px;
-
-  font-weight: 500;
-
-}
-
-.pro-filter .nice-select {
-
-	-webkit-tap-highlight-color: transparent;
-
-	background-color: #fff;
-
-	border-radius: 0;
-
-	border: solid 1px #e8e8e8;
-
-	box-sizing: border-box;
-
-	clear: both;
-
-	cursor: pointer;
-
-	display: block;
-
-	float: left;
-
-	font-family: inherit;
-
-	font-size: 14px;
-
-	font-weight: normal;
-
-	height: 50px;
-
-	line-height: 48px;
-
-	outline: none;
-
-	padding-left: 18px;
-
-	padding-right: 30px;
-
-	position: relative;
-
-	text-align: left !important;
-
-	-webkit-transition: all 0.2s ease-in-out;
-
-	transition: all 0.2s ease-in-out;
-
-	-webkit-user-select: none;
-
-	-moz-user-select: none;
-
-	-ms-user-select: none;
-
-	user-select: none;
-
-	white-space: nowrap;
-
-	width: auto;
-
-}
 
 .pro-filter::before {
 
@@ -8708,73 +8448,6 @@ p.checkout-coupon input[type="text"] {
 
 
 
-.country-select {
-
-  margin-bottom: 30px;
-
-  position: relative;
-
-}
-
-
-
-.country-select label, .checkout-form-list label {
-
-  color: #6f7172;
-
-  display: block;
-
-  margin: 0 0 5px;
-
-}
-
-
-
-.country-select label span.required, .checkout-form-list label span.required {
-
-  color: red;
-
-}
-
-
-
-.country-select select {
-
-  -moz-appearance: none;
-
-  border: 1px solid #eaedff;
-
-  height: 45px;
-
-  padding-left: 10px;
-
-  width: 100%;
-
-  color: #6f7172;
-
-}
-
-
-
-.country-select::before {
-
-  content: "\f107";
-
-  right: 15px;
-
-  top: 38px;
-
-  position: absolute;
-
-  color: #6f7172;
-
-  font-family: "Font Awesome 5 Free";
-
-  font-weight: 700;
-
-}
-
-
 
 .checkout-form-list {
 
@@ -9251,66 +8924,6 @@ p.checkout-coupon input[type="text"] {
 .order-button-payment button {
 
   width: 100%;
-
-}
-
-.country-select .nice-select {
-
-	-webkit-tap-highlight-color: transparent;
-
-	background-color: #fff;
-
-	border-radius: 0;
-
-	border: solid 1px #eaedff;
-
-	box-sizing: border-box;
-
-	clear: both;
-
-	cursor: pointer;
-
-	display: block;
-
-	float: left;
-
-	font-family: inherit;
-
-	font-size: 14px;
-
-	font-weight: normal;
-
-	height: 45px;
-
-	line-height: 45px;
-
-	outline: none;
-
-	padding-left: 18px;
-
-	padding-right: 30px;
-
-	position: relative;
-
-	text-align: left !important;
-
-	-webkit-transition: all 0.2s ease-in-out;
-
-	transition: all 0.2s ease-in-out;
-
-	-webkit-user-select: none;
-
-	-moz-user-select: none;
-
-	-ms-user-select: none;
-
-	user-select: none;
-
-	white-space: nowrap;
-
-	width: 100%;
-
-	margin-bottom: 19px;
 
 }
 

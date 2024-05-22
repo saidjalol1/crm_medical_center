@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> Services Template </title>
+    <title>Home</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,15 +12,12 @@
     <!-- CSS here -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/meanmenu.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    
-
 </head>
 
 <body>
@@ -33,12 +30,12 @@
                     <div class="col-xl-6 offset-xl-1 col-lg-6 offset-lg-1 col-md-7 offset-md-1">
                         <div class="header-info">
                             <span><i class="fas fa-phone"></i> +1 800 833 9780</span>
-                            <span>Address</span>
+                            <span id="address">Адрес</span>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-5 col-md-4">
                         <div class="header-top-right-btn f-right">
-                            <a href="appoinment.html" class="btn">Login</a>
+                            <a href="./pages/auth/login.html" class="btn">зарегистрироваться</a>
                         </div>
                     </div>
                 </div>
@@ -49,19 +46,24 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3 col-lg-3 col-md-5 d-flex align-items-center">
-                            <a href="index.html"><h1 style="color: rgb(201, 17, 17);">Logo</h1></a>
+                            <a href="index.html">
+                                <h2 style="color: rgb(185, 11, 11);">MedicCrm</h2>
+                            </a>
                     </div>
                     <div class="col-xl-9 col-lg-9 col-md-9">
                         <div class="header__menu f-right">
                             <nav id="mobile-menu">
                                 <ul>
-                                    <li><a href="index.html">Home</a>
+                                    <li><a href="index.html">Основной</a>
                                     </li>
-                                    <li><a href="services-2.html">Services</a>
+                                    <li><a href="./pages/service/services-2.html">Услуги</a>
                                     </li>
-                                    <li><a href="doctor-2.html">Specialists</a>
+                                    <li><a href="./pages/specialists/doctor-2.html">Специалисты</a>
                                     </li>
-                                    <li><a href="blog-2-col.html">Publications -></a>
+                                    <li><a href="./pages/blog/blog-2-col.html">Публикации</a>
+                                    </li>
+                                    <li>
+                                        <a href="./profile.html">Профиль</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -83,18 +85,16 @@
                 <div class="slider-active">
                     <div class="single-slider slider-height d-flex align-items-center" data-background="img/slider/slider-bg-1.jpg">
                         <div class="container">
-                            <div class="ro       <!-- services-area start -->
-        
-                                <!-- services-area end -->w">
+                            <div class="row">
                                 <div class="col-xl-6 col-lg-8 col-md-10">
                                     <div class="hero-text">
                                         <div class="hero-slider-caption ">
-                                            <h5 data-animation="fadeInUp" data-delay=".2s">We are here for your care.</h5>
-                                            <h1 data-animation="fadeInUp" data-delay=".4s">Short Story About our Clinic.</h1>
-                                            <p data-animation="fadeInUp" data-delay=".6s">Click Next -> </p>
+                                            <h5 data-animation="fadeInUp" data-delay=".2s">Мы здесь для вашей заботы</h5>
+                                            <h1 data-animation="fadeInUp" data-delay=".4s">Краткий рассказ о нашей клинике</h1>
+                                            <p data-animation="fadeInUp" data-delay=".6s">Нажмите Далее</p>
                                         </div>
                                         <div class="hero-slider-btn">
-                                            <a data-animation="fadeInLeft" data-delay=".6s" href="appoinment.html" class="btn btn-icon ml-0"><span>+</span>Make Appointment</a>
+                                            <a data-animation="fadeInLeft" data-delay=".6s" href="appoinment.html" class="btn btn-icon ml-0"><span>+</span>Назначить встречу</a>
                                         </div>
                                     </div>
                                 </div>
@@ -107,11 +107,14 @@
                                 <div class="col-xl-6 col-lg-8 col-md-10">
                                     <div class="hero-text">
                                         <div class="hero-slider-caption ">
-                                            <h5 data-animation="fadeInUp" data-delay=".2s">We are here for your care.</h5>
-                                            <p data-animation="fadeInUp" data-delay=".6s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <h5 data-animation="fadeInUp" data-delay=".2s">Мы здесь для вашей заботы</h5>
+                                            <p data-animation="fadeInUp" data-delay=".6s">
+                                                Наша клиника работает 24 часа в сутки, 7 дней в неделю, мы к вашим услугам в любое время, когда вы захотите.
+                                                 наши специалисты мастера своего дела
+                                            </p>
                                         </div>
                                         <div class="hero-slider-btn">
-                                            <a data-animation="fadeInLeft" data-delay=".6s" href="appoinment.html" class="btn btn-icon ml-0"><span>+</span>Make Appointment</a>
+                                            <a data-animation="fadeInLeft" data-delay=".6s" href="appoinment.html" class="btn btn-icon ml-0"><span>+</span>Назначить встречу</a>
                                         </div>
                                     </div>
                                 </div>
@@ -131,27 +134,29 @@
                     <div class="col-xl-6 col-lg-6 col-md-10">
                         <div class="section-title pos-rel mb-45">
                             <div class="section-text section-text-white pos-rel">
-                                <h5>We are available 24/7</h5>
-                                <h1 class="white-color">Our advantages.</h1>
+                                <h5>Мы доступны 24/7</h5>
+                                <h1 class="white-color">Наши преимущества</h1>
                             </div>
                         </div>
                         <div class="section-button section-button-left mb-30">
-                            <a data-animation="fadeInLeft" data-delay=".6s" href="appoinment.html" class="btn btn-icon ml-0"><span>+</span>Make Appointment</a>
+                            <a data-animation="fadeInLeft" data-delay=".6s" href="appoinment.html" class="btn btn-icon ml-0"><span>+</span>Назначить встречу</a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-lg-6 col-md-8">
                         <div class="cta-satisfied">
                             <div class="single-satisfied mb-50">
                                 <h1>1M+</h1>
-                                <h5> <i class="fas fa-user"></i> Satisfied Patients</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua.</p>
+                                <h5> <i class="fas fa-user"></i>Довольные пациенты</h5>
+                                <p>
+                                    Мы оказали терпение более 1 миллиону человек, и все они остались довольны нашими услугами и нашли решение своей проблемы.
+                                </p>
                             </div>
                             <div class="single-satisfied mb-50">
                                 <h1>100+</h1>
-                                <h5><i class="far fa-thumbs-up"></i> World Awards</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua.</p>
+                                <h5><i class="far fa-thumbs-up"></i>Мировые награды</h5>
+                                <p>
+                                    Мы сертифицированы и награждены более чем в 100+ номинациях.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -159,14 +164,16 @@
             </div>
         </section>
         <!-- fact-area end -->
+        <!-- services block start -->
         <section class="about-area pt-120 pb-90">
             <div class="container">
+                <!-- More services -->
                 <div class="row">
                     <div class="col-xl-7 col-lg-8 col-md-12">
                         <div class="section-title pos-rel mb-75">
                             <div class="section-text pos-rel">
-                                <h5>Our services</h5>
-                                <h1>Managed Your Heathcare Services</h1>
+                                <h5>Наши сервисы</h5>
+                                <h1>Найдите нужную вам услугу</h1>
                             </div>
                             <div class="section-line pos-rel">
                                 <img src="img/shape/section-title-line.png" alt="">
@@ -175,74 +182,24 @@
                     </div>
                     <div class="col-xl-5 col-lg-4">
                         <div class="section-button text-right d-none d-lg-block pt-80">
-                            <a data-animation="fadeInLeft" data-delay=".6s" href="services.html"
-                                class="btn btn-icon ml-0"><span>+</span>more services</a>
+                            <a data-animation="fadeInLeft" data-delay=".6s" href="/pages/service/services-2.html"
+                                class="btn btn-icon ml-0"><span>+</span>больше услуг</a>
                         </div>
                     </div>
                 </div>
+                <!-- Servies Main -->
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="service-box-3 mb-30 text-center">
-                            
                             <div class="service-content-box">
                                 <div class="service-content">
-                                    <h3><a href="news-details.html">Body Surgery</a></h3>
-                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo.</p>
+                                    <h3><a href="news-details.html">диагностика</a></h3>
+                                    <p>
+                                        сюда попадает информация об услуге при внедрении серверной части,
+                                        сюда попадает информация об услуге при внедрении серверной части
+                                    </p>
                                 </div>
-                                <a href="#" class="service-link">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="service-box-3 mb-30 text-center">
-                            
-                            <div class="service-content-box">
-                                <div class="service-content">
-                                    <h3><a href="news-details.html">Neurology Sargery</a></h3>
-                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo.</p>
-                                </div>
-                                <a href="#" class="service-link">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="service-box-3 mb-30 text-center">
-                            
-                            <div class="service-content-box">
-                                <div class="service-content">
-                                    <h3><a href="news-details.html">Blood Cancer</a></h3>
-                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo.</p>
-                                </div>
-                                <a href="#" class="service-link">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="service-box-3 mb-30 text-center">
-                           
-                            <div class="service-content-box">
-                                <div class="service-content">
-                                    <h3><a href="news-details.html">Family Care</a></h3>
-                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo.</p>
-                                </div>
-                                <a href="#" class="service-link">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="service-box-3 mb-30 text-center">
-                            
-                            <div class="service-content-box">
-                                <div class="service-content">
-                                    <h3><a href="news-details.html">Eye Care</a></h3>
-                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo.</p>
-                                </div>
-                                <a href="#" class="service-link">Read More</a>
+                                <a href="./pages/service/service_detail.html" class="service-link">Читать далее</a>
                             </div>
                         </div>
                     </div>
@@ -250,17 +207,77 @@
                         <div class="service-box-3 mb-30 text-center">
                             <div class="service-content-box">
                                 <div class="service-content">
-                                    <h3><a href="news-details.html">Allergic Issue</a></h3>
-                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo.</p>
+                                    <h3><a href="news-details.html">уход</a></h3>
+                                    <p>
+                                        сюда попадает информация об услуге при внедрении серверной части,
+                                        сюда попадает информация об услуге при внедрении серверной части
+                                    </p>
                                 </div>
-                                <a href="#" class="service-link">Read More</a>
+                                <a href="./pages/service/service_detail.html" class="service-link">Читать далее</a>
                             </div>
                         </div>
                     </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="service-box-3 mb-30 text-center">
+                            <div class="service-content-box">
+                                <div class="service-content">
+                                    <h3><a href="news-details.html">реабилитация</a></h3>
+                                    <p>
+                                        сюда попадает информация об услуге при внедрении серверной части,
+                                        сюда попадает информация об услуге при внедрении серверной части
+                                    </p>
+                                </div>
+                                <a href="./pages/service/service_detail.html" class="service-link">Читать далее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="service-box-3 mb-30 text-center">
+                            <div class="service-content-box">
+                                <div class="service-content">
+                                    <h3><a href="news-details.html">процедуры</a></h3>
+                                    <p>
+                                        сюда попадает информация об услуге при внедрении серверной части,
+                                        сюда попадает информация об услуге при внедрении серверной части
+                                    </p>
+                                </div>
+                                <a href="./pages/service/service_detail.html" class="service-link">Читать далее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="service-box-3 mb-30 text-center">
+                            <div class="service-content-box">
+                                <div class="service-content">
+                                    <h3><a href="news-details.html">тесты</a></h3>
+                                    <p>
+                                        сюда попадает информация об услуге при внедрении серверной части,
+                                        сюда попадает информация об услуге при внедрении серверной части
+                                    </p>
+                                </div>
+                                <a href="./pages/service/service_detail.html" class="service-link">Читать далее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="service-box-3 mb-30 text-center">
+                            <div class="service-content-box">
+                                <div class="service-content">
+                                    <h3><a href="news-details.html">комплексы</a></h3>
+                                    <p>
+                                        сюда попадает информация об услуге при внедрении серверной части,
+                                        сюда попадает информация об услуге при внедрении серверной части
+                                    </p>
+                                </div>
+                                <a href="./pages/service/service_detail.html" class="service-link">Читать далее</a>
+                            </div>
+                        </div>
+                    </div>  
                 </div>
+                <!-- Services main end -->
             </div>
         </section>
+        <!-- services block end -->
         <!-- cta-area start -->
         <section class="cta-area pos-rel pt-115 pb-120" data-background="img/slider/slider-bg-1.jpg">
             <div class="container">
@@ -269,12 +286,12 @@
                         <div class="cta-text text-center">
                             <div class="section-title pos-rel mb-50">
                                 <div class="section-text section-text-white pos-rel">
-                                    <h5>Stay healthy & strong to enjoy life</h5>
-                                    <h1 class="white-color">Trust Us To Be There To Help All & Make Things Well Again.</h1>
+                                    <h5>Будьте здоровы и сильны, чтобы наслаждаться жизнью</h5>
+                                    <h1 class="white-color">Доверьтесь нам, чтобы помочь всем и снова исправить ситуацию.</h1>
                                 </div>
                             </div>
                             <div class="section-button section-button-left">
-                                <a data-animation="fadeInLeft" data-delay=".6s" href="appoinment.html" class="btn btn-icon btn-icon-green ml-0"><span>+</span>get a consultant</a>
+                                <a data-animation="fadeInLeft" data-delay=".6s" href="appoinment.html" class="btn btn-icon btn-icon-green ml-0"><span>+</span>получить консультанта</a>
                             </div>
                         </div>
                     </div>
@@ -286,7 +303,7 @@
             <div class="container">
                 <div class="row d-flex justify-content-center" style="margin-top: 100px;">
                     <div class="col-md-10 col-xl-8 text-center">
-                      <h3 class="mb-4">Revies from our Clients</h3>
+                      <h3 class="mb-4">Отзывы наших клиентов</h3>
                     </div>
                   </div>
                 
@@ -318,6 +335,10 @@
                       </p>
                     </div>
                   </div>
+                  <div class="section-button text-center d-none d-lg-block pt-80">
+                    <a data-animation="fadeInLeft" data-delay=".6s" href="./review.html"
+                        class="btn btn-icon ml-0"><span>+</span>оставьте свой отзыв</a>
+                  </div>
             </div>    
         </section>
 
@@ -326,9 +347,9 @@
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-          <h2 class="fs-6 text-secondary mb-2 text-uppercase text-center">Our Clients</h2>
-          <h2 class="mb-4 display-5 text-center text-white">Trusted by over 786+ clients.</h2>
-          <p class="fs-5  mb-5 text-center text-white">Our clients are our top priority, and we are committed to providing them with the highest level of service.</p>
+          <h2 class="fs-6 text-secondary mb-2 text-uppercase text-center">Наши сторонники</h2>
+          <h2 class="mb-4 display-5 text-center text-white">Нам доверяют более 786+ клиентов.</h2>
+          <p class="fs-5  mb-5 text-center text-white">Наши клиенты являются нашим главным приоритетом, и мы стремимся предоставить им сервис высочайшего уровня.</p>
           <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
         </div>
       </div>
@@ -435,20 +456,23 @@
                                     <i class="fas fa-phone"></i>
                                 </div>
                                 <div class="emmergency-call-text f-left">
-                                    <h6>Emergency number</h6>
+                                    <h6>Экстренный номер</h6>
                                     <span>202-555-0104</span>
                                 </div>
                             </div>
                             <div class="footer-logo mb-35">
-                                <a href="#"><h1>Logo</h1></a>
+                                <a href="index.html">
+                                    <h2 style="color: rgb(185, 11, 11);">MedicCrm</h2>
+                                </a>
                             </div>
                             <div class="footer-contact-content mb-25">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                                <p>
+
+                                </p>
                             </div>
                             <div class="footer-emailing">
                                 <ul>
-                                    <li><i class="far fa-envelope"></i><a href="https://wphix.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fc95929a93bc99849d918c9099919998959f9d90d29f9391">[email&#160;protected]</a></li>
+                                    <li><i class="far fa-envelope"></i><a >example@gmal.com</a></li>
                                     <li><i class="far fa-clone"></i>examplemedical.com</li>
                                     <li><i class="far fa-flag"></i>227 Marion Street, Columbia</li>
                                 </ul>
@@ -458,16 +482,16 @@
                     <div class="col-xl-2 offset-xl-1 col-lg-3 col-md-4">
                         <div class="footer-widget mb-30">
                             <div class="footer-title">
-                                <h3>Departments</h3>
+                                <h3>Услуги</h3>
                             </div>
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="#">Surgery and Radiology</a></li>
-                                    <li><a href="#">Family Medicine</a></li>
-                                    <li><a href="#">Women’s Health</a></li>
-                                    <li><a href="#">Optician</a></li>
-                                    <li><a href="#">Pediatrics</a></li>
-                                    <li><a href="#">Dermatology</a></li>
+                                    <li><a href="./pages/service/service_detail.html">диагностика</a></li>
+                                    <li><a href="./pages/service/service_detail.html">уход</a></li>
+                                    <li><a href="./pages/service/service_detail.html">реабилитация</a></li>
+                                    <li><a href="./pages/service/service_detail.html">процедуры</a></li>
+                                    <li><a href="./pages/service/service_detail.html">тесты</a></li>
+                                    <li><a href="./pages/service/service_detail.html">тесты</a></li>
                                 </ul>
                             </div>
                         </div>
