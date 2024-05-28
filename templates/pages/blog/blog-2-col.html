@@ -1,91 +1,8 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-
-
-<!-- Mirrored from wphix.com/template/medidove-prv/medidove/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 May 2024 09:33:46 GMT -->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Blog</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="manifest" href="site.html">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-    <!-- Place favicon.png in the root directory -->
-
-   <!-- CSS here -->
-   <link rel="stylesheet" href="../../css/bootstrap.min.css">
-   <link rel="stylesheet" href="../../css/owl.carousel.min.css">
-   <link rel="stylesheet" href="../../css/animate.min.css">
-   <link rel="stylesheet" href="../../css/nice-select.css">
-   <link rel="stylesheet" href="../../css/magnific-popup.css">
-   <link rel="stylesheet" href="../../css/all.min.css">
-   <link rel="stylesheet" href="../../css/meanmenu.css">
-   <link rel="stylesheet" href="../../css/slick.css">
-   <link rel="stylesheet" href="../../css/default.css">
-   <link rel="stylesheet" href="../../css/style.css">
-   <link rel="stylesheet" href="../../css/responsive.css">
-</head>
-
-<body>
-
-    <header>
-        <div class="top-bar d-none d-md-block">
-            <div class="container">
-                <div class="row d-flex align-items-center">
-                    <div class="col-xl-6 offset-xl-1 col-lg-6 offset-lg-1 col-md-7 offset-md-1">
-                        <div class="header-info">
-                            <span><i class="fas fa-phone"></i> +1 800 833 9780</span>
-                            <span id="address">Адрес</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-5 col-lg-5 col-md-4">
-                        <div class="header-top-right-btn f-right">
-                            <a href="../auth/register.html" class="btn">зарегистрироваться</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- menu-area -->
-        <div class="header-menu-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-3 col-lg-3 col-md-5 d-flex align-items-center">
-                            <a href="../../index.html">
-                                <h2 style="color: rgb(185, 11, 11);">MedicCrm</h2>
-                            </a>
-                    </div>
-                    <div class="col-xl-9 col-lg-9 col-md-9">
-                        <div class="header__menu f-right">
-                            <nav id="mobile-menu">
-                                <ul>
-                                    <li><a href="../../index.html">Основной</a>
-                                    </li>
-                                    <li><a href="../service/services-2.html">Услуги</a>
-                                    </li>
-                                    <li><a href="../specialists/doctor-2.html">Специалисты</a>
-                                    </li>
-                                    <li><a href="blog-2-col.html">Публикации</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog-2-col.html">Профиль</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="mobile-menu"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-        <!-- hero-area start -->
-        <section class="breadcrumb-bg pt-200 pb-180" data-background="../../img/page/page-bg.jpg">
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}Blog{% endblock title %}
+{% block content %}
+        <section class="breadcrumb-bg pt-200 pb-180" data-background="{% static 'img/page/page-bg.jpg' %}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 col-md-9">
@@ -99,7 +16,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb ">
                                     <li class="breadcrumb-item">
-                                        <a href="../../index.html">Home</a>
+                                        <a href="{% url 'main_app:home' %}">Home</a>
                                     </li>
                                     <li class="breadcrumb-item active" aria-current="page">Blog</li>
                                 </ol>
@@ -110,273 +27,69 @@
             </div>
         </section>
         <!-- hero-area end -->
-
+        <section style="margin-top: 70px;">
+            <div class="container px-4">
+                <div class="row">
+                    <div class="col d-flex justify-content-start">
+                        <form class="search-form col-xs-12 col-lg-6" method="post">
+                            {% csrf_token %}
+                            <input type="text" name="title" placeholder="Поиск статей" width="100%">
+                            <button type="submit" name="filter"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- blog-area start -->
         <section class="blog-area pt-120 pb-120">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 d-flex justify-content-space-between mb-10">
-                        <form class="search-form">
-                            <input type="text" placeholder="Поиск статей">
-                            <button type="submit"><i class="fas fa-search"></i></button>
-                        </form>
-                    </div>
-                </div>
-                <div class="row">
+                    {% for i in posts %}
                     <div class="col-lg-6 col-md-6">
                         <article class="postbox post format-image mb-40">
                             <div class="postbox__thumb">
-                                <a href="./blog-details.html">
-                                    <img src="../../img/blog/b1.jpg" alt="blog image">
+                                <a href="{% url 'blog:blog_detail' i.slug %}">
+                                    <img src="{{ i.image.url }}" alt="blog_image">
                                 </a>
                             </div>
                             <div class="postbox__text p-30">
                                 <h3 class="blog-title blog-title-sm">
-                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor
-                                        incididunt
-                                        .</a>
+                                    <a href="{% url 'blog:blog_detail' i.slug %}">{{ i.title }}</a>
                                 </h3>
                                 <div class="post-text">
-                                    <p>There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health
-                                    topics that consistently affect a wide range of people. They also get kudos.</p>
+                                    <p>{{ i.post_text|safe|truncatechars:80 }}</p>
                                 </div>
                                 <div class="read-more">
-                                    <a href="./blog-details.html" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    <a href="{% url 'blog:blog_detail' i.slug %}" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                         </article>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                        <article class="postbox post format-image mb-40">
-                            <div class="postbox__thumb">
-                                <a href="./blog-details.html">
-                                    <img src="../../img/blog/b1.jpg" alt="blog image">
-                                </a>
-                            </div>
-                            <div class="postbox__text p-30">
-                                <h3 class="blog-title blog-title-sm">
-                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor
-                                        incididunt
-                                        .</a>
-                                </h3>
-                                <div class="post-text">
-                                    <p>There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health
-                                    topics that consistently affect a wide range of people. They also get kudos.</p>
-                                </div>
-                                <div class="read-more">
-                                    <a href="./blog-details.html" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <article class="postbox post format-image mb-40">
-                            <div class="postbox__thumb">
-                                <a href="./blog-details.html">
-                                    <img src="../../img/blog/b1.jpg" alt="blog image">
-                                </a>
-                            </div>
-                            <div class="postbox__text p-30">
-                                <h3 class="blog-title blog-title-sm">
-                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor
-                                        incididunt
-                                        .</a>
-                                </h3>
-                                <div class="post-text">
-                                    <p>There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health
-                                    topics that consistently affect a wide range of people. They also get kudos.</p>
-                                </div>
-                                <div class="read-more">
-                                    <a href="./blog-details.html" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <article class="postbox post format-image mb-40">
-                            <div class="postbox__thumb">
-                                <a href="./blog-details.html">
-                                    <img src="../../img/blog/b1.jpg" alt="blog image">
-                                </a>
-                            </div>
-                            <div class="postbox__text p-30">
-                                <h3 class="blog-title blog-title-sm">
-                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor
-                                        incididunt
-                                        .</a>
-                                </h3>
-                                <div class="post-text">
-                                    <p>There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health
-                                    topics that consistently affect a wide range of people. They also get kudos.</p>
-                                </div>
-                                <div class="read-more">
-                                    <a href="./blog-details.html" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <article class="postbox post format-image mb-40">
-                            <div class="postbox__thumb">
-                                <a href="./blog-details.html">
-                                    <img src="../../img/blog/b1.jpg" alt="blog image">
-                                </a>
-                            </div>
-                            <div class="postbox__text p-30">
-                                <h3 class="blog-title blog-title-sm">
-                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor
-                                        incididunt
-                                        .</a>
-                                </h3>
-                                <div class="post-text">
-                                    <p>There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health
-                                    topics that consistently affect a wide range of people. They also get kudos.</p>
-                                </div>
-                                <div class="read-more">
-                                    <a href="./blog-details.html" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <article class="postbox post format-image mb-40">
-                            <div class="postbox__thumb">
-                                <a href="./blog-details.html">
-                                    <img src="../../img/blog/b1.jpg" alt="blog image">
-                                </a>
-                            </div>
-                            <div class="postbox__text p-30">
-                                <h3 class="blog-title blog-title-sm">
-                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor
-                                        incididunt
-                                        .</a>
-                                </h3>
-                                <div class="post-text">
-                                    <p>There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health
-                                    topics that consistently affect a wide range of people. They also get kudos.</p>
-                                </div>
-                                <div class="read-more">
-                                    <a href="./blog-details.html" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
+                    {% endfor %}
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <div class="basic-pagination basic-pagination-2 text-center">
                             <ul>
-                                <li><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
-                                <li><a href="#">01</a></li>
-                                <li class="active"><a href="#">02</a></li>
-                                <li><a href="#">03</a></li>
-                                <li><a href="#"><i class="fas fa-ellipsis-h"></i></a></li>
-                                <li><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
+                                {% if page_obj.has_previous %}
+                                    <li><a href="?page={{ page_obj.previous_page_number }}"><<</a></li>
+                                {% endif %}
+                
+                                {% for p in paginator.page_range %}
+                                    <li {% if p == page_obj.number %}class="active"{% endif %}>
+                                        <a href="?page={{ p }}">{{ p }}</a>
+                                    </li>
+                                {% endfor %}
+                
+                                {% if page_obj.has_next %}
+                                    <li><a href="?page={{ page_obj.next_page_number }}">>></a></li>
+                                {% endif %}
                             </ul>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </section>
-        <!-- blog-area end -->
-    </main>
-
-    <!-- footer start -->
-    <footer style="margin-top: 100px;">
-        <div class="footer-top primary-bg pt-115 pb-90">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-5 col-lg-6 col-md-8">
-                        <div class="footer-contact-info mb-30">
-                            <div class="emmergency-call fix">
-                                <div class="emmergency-call-icon f-left">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="emmergency-call-text f-left">
-                                    <h6>Экстренный номер</h6>
-                                    <span>202-555-0104</span>
-                                </div>
-                            </div>
-                            <div class="footer-logo mb-35">
-                                <a href="index.html">
-                                    <h2 style="color: rgb(185, 11, 11);">MedicCrm</h2>
-                                </a>
-                            </div>
-                            <div class="footer-contact-content mb-25">
-                                <p>
-
-                                </p>
-                            </div>
-                            <div class="footer-emailing">
-                                <ul>
-                                    <li><i class="far fa-envelope"></i><a >example@gmal.com</a></li>
-                                    <li><i class="far fa-clone"></i>examplemedical.com</li>
-                                    <li><i class="far fa-flag"></i>227 Marion Street, Columbia</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 offset-xl-1 col-lg-3 col-md-4">
-                        <div class="footer-widget mb-30">
-                            <div class="footer-title">
-                                <h3>Услуги</h3>
-                            </div>
-                            <div class="footer-menu">
-                                <ul>
-                                    <li><a href="../service/service_detail.html">диагностика</a></li>
-                                    <li><a href="../service/service_detail.html">уход</a></li>
-                                    <li><a href="../service/service_detail.html">реабилитация</a></li>
-                                    <li><a href="../service/service_detail.html">процедуры</a></li>
-                                    <li><a href="../service/service_detail.html">тесты</a></li>
-                                    <li><a href="../service/service_detail.html">тесты</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 offset-xl-1 col-lg-3 d-md-none d-lg-block">
-                        <div class="footer-widget mb-30">
-                            <div class="footer-title">
-                                <h3>Quick Links</h3>
-                            </div>
-                            <div class="footer-menu">
-                                <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Our Specialists</a></li>
-                                    <li><a href="#">Publications</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Book an Appointment</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer end -->
-
-    <!-- JS here -->
-    <script src="../../js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="../../js/popper.min.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/owl.carousel.min.js"></script>
-    <script src="../../js/isotope.pkgd.min.js"></script>
-    <script src="../../js/one-page-nav-min.js"></script>
-    <script src="../../js/slick.min.js"></script>
-    <script src="../../js/ajax-form.js"></script>
-    <script src="../../js/wow.min.js"></script>
-    <script src="../../js/jquery.nice-select.min.js"></script>
-    <script src="../../js/jquery.scrollUp.min.js"></script>
-    <script src="../../js/jquery.meanmenu.min.js"></script>
-    <script src="../../js/jquery.counterup.min.js"></script>
-    <script src="../../js/waypoints.min.js"></script>
-    <script src="../../js/imagesloaded.pkgd.min.js"></script>
-    <script src="../../js/jquery.magnific-popup.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvEEMx3XDpByNzYNn0n62Zsq_sVYPx1zY"></script>
-    <script src="../../js/plugins.js"></script>
-    <script src="../../js/main.js"></script>
-</body>
-
-
-<!-- Mirrored from wphix.com/template/medidove-prv/medidove/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 May 2024 09:33:46 GMT -->
-</html>
+{% endblock content %}
+     

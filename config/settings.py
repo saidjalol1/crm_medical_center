@@ -22,6 +22,8 @@ INSTALLED_APPS = [
     "users.apps.UsersConfig",
     "main_app.apps.MainAppConfig",
     "service.apps.ServiceConfig",
+    "doctors.apps.DoctorsConfig",
+    "blog.apps.BlogConfig",
     
     'django.contrib.admin',
     'django.contrib.auth',
@@ -29,6 +31,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -96,7 +100,17 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
+AUTH_USER_MODEL = 'users.DoctorsOrUsers'
 
+CKEDITOR_UPLOAD_PATH = "blog/"
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': '100%',
+    },
+}
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 

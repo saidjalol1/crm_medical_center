@@ -59,12 +59,12 @@
                                     </li>
                                     <li><a href="{% url 'service_app:service' %}">Услуги</a>
                                     </li>
-                                    <li><a href="./pages/specialists/doctor-2.html">Специалисты</a>
+                                    <li><a href="{% url 'doctors_app:doctors_home' %}">Специалисты</a>
                                     </li>
-                                    <li><a href="./pages/blog/blog-2-col.html">Публикации</a>
+                                    <li><a href="{% url 'blog:blog_main' %}">Публикации</a>
                                     </li>
                                     <li>
-                                        <a href="./profile.html">Профиль</a>
+                                        <a href="{% url 'users:profile' %}">Профиль</a>
                                     </li>
                                 </ul>
                             </nav>

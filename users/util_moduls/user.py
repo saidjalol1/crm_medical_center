@@ -1,6 +1,6 @@
 from django.shortcuts import  redirect
 from django.contrib.auth.backends import BaseBackend
-from django.contrib.auth.models import User
+from users.models import DoctorsOrUsers
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
 
@@ -22,7 +22,7 @@ def register(request):
 
         # Create the user
         try:
-            user_check = User.objects.get(email=email)
+            user_check = DoctorsOrUsers.objects.get(email=email)
             if user_check:
                 messages.error(request, 'Пользователь с таким адресом электронной почты уже существует.')
                 return redirect("users:register")
@@ -32,7 +32,7 @@ def register(request):
             pass
             
         try:
-            user = User.objects.create_user(
+            user = DoctorsOrUsers.objects.create_user(
                 first_name=first_name, 
                 last_name=last_name, 
                 username=username, 
@@ -59,6 +59,8 @@ def login_user(request):
     if request.method == "POST" and  "login" in request.POST:
         username = request.POST["username"]
         password = request.POST["password"]
+        print(username)
+        print(password)
         
         user = authenticate(request, username=username, password=password)
         if user is not None:
@@ -77,11 +79,11 @@ class EmailOrUsernameModelBackend(BaseBackend):
             username = kwargs.get('username')
             
         try:
-            user = User.objects.get(username=username)
-        except User.DoesNotExist:
+            user = DoctorsOrUsers.objects.get(username=username)
+        except DoctorsOrUsers.DoesNotExist:
             try:
-                user = User.objects.get(email=username)
-            except User.DoesNotExist:
+                user = DoctorsOrUsers.objects.get(email=username)
+            except DoctorsOrUsers.DoesNotExist:
                 return None
 
         if user.check_password(password) and self.user_can_authenticate(user):
@@ -93,6 +95,6 @@ class EmailOrUsernameModelBackend(BaseBackend):
 
     def get_user(self, user_id):
         try:
-            return User.objects.get(pk=user_id)
-        except User.DoesNotExist:
+            return DoctorsOrUsers.objects.get(pk=user_id)
+        except DoctorsOrUsers.DoesNotExist:
             return None
