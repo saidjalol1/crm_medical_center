@@ -4,6 +4,7 @@ from django.views import View
 
 from .util_moduls import user
 from .models import DoctorsOrUsers
+from appointment.models import Appointment
 
 # Decorators
 from django.contrib.auth.decorators import login_required
@@ -40,8 +41,16 @@ class ProfileView(View):
     template_name = "profile.html"
     
     def get_context_data(self):
+        appointments = None
+        user = DoctorsOrUsers.objects.get(id= self.request.user.id )
+        if user.is_doctor == True:
+            appointments = Appointment.objects.filter(doctor__id = user.id )
+        else:
+            appointments = Appointment.objects.filter(user__id = user.id )
+            
         context = {
-            "user" : DoctorsOrUsers.objects.get(id= self.request.user.id )
+            "user" : user,
+            "appointments" : appointments
         }    
         return context
     

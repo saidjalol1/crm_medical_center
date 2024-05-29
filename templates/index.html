@@ -164,35 +164,18 @@
                   </div>
                 
                   <div class="row text-center mt-30">
+                    {% for review in reviews %}
                     <div class="col-md-4 mb-5 mb-md-0">
-                      <h5 class="mb-3">Maria Smantha</h5>
-                      <h6 class="text-primary mb-3">Web Developer</h6>
+                      <h5 class="mb-3">{{ review.name }}</h5>
+                      <h6 class="text-primary mb-3">{{ review.person_job }}</h6>
                       <p class="px-xl-3">
-                        <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
-                        tenetur.
+                        <i class="fas fa-quote-left pe-2"></i>{{ review.body|truncatechars:150 }}
                       </p>
                     </div>
-                    <div class="col-md-4 mb-5 mb-md-0">
-                      <h5 class="mb-3">Lisa Cudrow</h5>
-                      <h6 class="text-primary mb-3">Graphic Designer</h6>
-                      <p class="px-xl-3">
-                        <i class="fas fa-quote-left pe-2"></i>Ut enim ad minima veniam, quis nostrum
-                        exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid commodi.
-                      </p>
-                    
-                    </div>
-                    <div class="col-md-4 mb-0">
-                      <h5 class="mb-3">John Smith</h5>
-                      <h6 class="text-primary mb-3">Marketing Specialist</h6>
-                      <p class="px-xl-3">
-                        <i class="fas fa-quote-left pe-2"></i>At vero eos et accusamus et iusto odio
-                        dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
-                      </p>
-                    </div>
+                    {% endfor %}
                   </div>
                   <div class="section-button text-center d-none d-lg-block pt-80">
-                    <a data-animation="fadeInLeft" data-delay=".6s" href="./review.html"
+                    <a data-animation="fadeInLeft" data-delay=".6s" href="{% url 'main_app:review' %}"
                         class="btn btn-icon ml-0"><span>+</span>оставьте свой отзыв</a>
                   </div>
             </div>    

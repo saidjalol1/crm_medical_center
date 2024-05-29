@@ -6,6 +6,13 @@ from service.models import Services
 from users.models import DoctorsOrUsers
 from .models import Appointment
 
+
+# Decorators
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+
+
+@method_decorator(login_required, name='dispatch')
 class AppointmentView(View):
     template_name = "appointment.html"
     
