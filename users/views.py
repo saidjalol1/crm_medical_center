@@ -5,6 +5,9 @@ from django.views import View
 from .util_moduls import user
 from .models import DoctorsOrUsers
 
+# Decorators
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 class RegisterView(View):
     template_name = "pages/auth/register.html"
@@ -32,6 +35,7 @@ class LogInView(View):
         return response if response else render(request, self.template_name)
 
 
+@method_decorator(login_required, name='dispatch')
 class ProfileView(View):
     template_name = "profile.html"
     

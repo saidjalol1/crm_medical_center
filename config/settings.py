@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     "service.apps.ServiceConfig",
     "doctors.apps.DoctorsConfig",
     "blog.apps.BlogConfig",
+    "appointment.apps.AppointmentConfig",
     
     'django.contrib.admin',
     'django.contrib.auth',
@@ -94,6 +95,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+LOGIN_URL = 'users:login'
 
 AUTHENTICATION_BACKENDS = [
     'users.util_moduls.user.EmailOrUsernameModelBackend',
